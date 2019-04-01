@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -102,7 +102,6 @@
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -113,6 +112,11 @@
       <Project>{DC69056C-24E0-4AD1-82A6-6F1DEB2AE70E}</Project>
       <Name>AdaptiveCards.Rendering.Xamarin.iOS</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Net.Http">
+      <Version>4.3.3</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="..\AdaptiveCards.BotConnection\AdaptiveCards.BotConnection.projitems" Label="Shared" Condition="Exists('..\AdaptiveCards.BotConnection\AdaptiveCards.BotConnection.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
